@@ -1,0 +1,36 @@
+{{template "header.html"}}
+<div class="album py-5 bg-light">
+  
+    <div class="container">
+      <a href="/tools" class="btn btn-outline-primary btn-sm" role="button">Back</a>
+      <a href="/tools/password/create" class="btn btn-outline-primary btn-sm" role="button">Create</a>
+    </div>
+    <div class="container">
+      <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Password</th>
+              <th>Details</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+          {{range .List}}
+            <tr>
+              <td>{{.Name}}</td>
+              <td>{{.Password}}</td>
+              <td>{{.Details}}</td>
+              <td>
+                <a href="/tools/password/delete?id={{.Id}}" class="btn btn-outline-primary btn-sm" role="button">Delete</a>
+                <a href="/tools/password/edit?id={{.Id}}" class="btn btn-outline-primary btn-sm" role="button">Edit</a>
+              </td>
+            </tr>
+          {{end}}  
+        </tbody>
+      </table>
+    </div>
+</div>
+
+{{template "footer.html"}}
+

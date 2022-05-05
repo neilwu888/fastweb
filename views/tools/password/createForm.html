@@ -1,0 +1,20 @@
+{{template "header.html"}}
+<div class="container">
+  <form action="/tools/password/save" method="POST">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="text" class="form-control" id="password" name="password" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+      <label for="details">Details</label>
+      <textarea class="form-control" id="details" rows="3" name="details"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+  </form>
+</div>
+{{template "footer.html"}}
+
